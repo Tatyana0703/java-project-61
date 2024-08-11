@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := build-test
 
+cd-folder:
+	cd ./app
 setup:
 	./gradlew wrapper --gradle-version 8.5
 
@@ -31,7 +33,7 @@ check-deps:
 	./gradlew dependencyUpdates -Drevision=release
 
 
-build-test: build test report
+build-test: cd-folder build test report
 
 .PHONY: build
 .PHONY: test
