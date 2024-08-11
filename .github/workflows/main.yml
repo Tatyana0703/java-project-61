@@ -29,5 +29,6 @@ jobs:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
           JACOCO_SOURCE_PATH: "/home/runner/work/java-project-61/app/src/main/java"
         with:
+          working-directory: ./app
           coverageCommand: ./gradlew jacocoTestReport
           coverageLocations: /home/runner/work/java-project-61/app/build/reports/jacoco/test/jacocoTestReport.xml:jacoco
