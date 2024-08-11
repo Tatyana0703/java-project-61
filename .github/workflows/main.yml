@@ -20,7 +20,9 @@ jobs:
       - name: start checkstyleMain
         working-directory: ./app
         run: ./gradlew checkstyleMain
-      - run: ./gradlew test
+      - name: start gradlew test
+        working-directory: ./app
+        run: ./gradlew test
       - name: Publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
         env:
