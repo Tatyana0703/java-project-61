@@ -25,7 +25,8 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.19.0")
 }
 
-tasks.test {    useJUnitPlatform()
+tasks.test {
+    useJUnitPlatform()
     // https://technology.lastminute.com/junit5-kotlin-and-gradle-dsl/
     testLogging {
         exceptionFormat = TestExceptionFormat.FULL

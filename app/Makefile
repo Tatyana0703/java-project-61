@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := build-run
+.DEFAULT_GOAL := build-test
 
 setup:
 	./gradlew wrapper --gradle-version 8.5
@@ -31,6 +31,7 @@ check-deps:
 	./gradlew dependencyUpdates -Drevision=release
 
 
-build-run: build run
+build-test: build test report
 
 .PHONY: build
+.PHONY: test
