@@ -1,26 +1,15 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import static java.lang.System.in;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-public final class Cli {
-
-    static Logger logger = Logger.getLogger(Cli.class.getName());
-
-    private Cli() {
-    }
+public class Cli {
 
     public static void greet() {
-        Scanner scanner = new Scanner(in);
-
-        logger.info("Hello, world!");
-        logger.info("What is your name? ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hello, world!");
+        System.out.println("What is your name? ");
         String userName = scanner.next();
-        logger.log(Level.INFO, "Hello, {}!", userName);
-
+        System.out.printf("Hello, %s!", userName);
         scanner.close();
     }
 }
